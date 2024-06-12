@@ -20,6 +20,12 @@ $col2_1 = $bottom_links['2col'][0]['2col_item'];
 $col2_2 = $bottom_links['2col'][1]['2col_item'];
 $col1 = $bottom_links['1col_item'][0];
 
+// 商品紹介セクション
+$products = get_field('products');
+$product_01 = $products['product_01'];
+$product_02 = $products['product_02'];
+$product_03 = $products['product_03'];
+
 // ブログ クエリ
 $blog_query = new WP_Query([
   'post_status' => 'publish',
@@ -175,20 +181,130 @@ get_header();
         <p class="bl_heading_en hp_clr_theme hp_ff_Europa">PRODUCTS</p>
         <p class="bl_heading_ja">製品紹介</p>
       </h2>
-      <ul class="product_grid">
-          <li class="product_grid_item">
-            <a href="">
-              <!-- PC画像 -->
-              <img src="<?php echo get_template_directory_uri();?>/assets/images/noimage.png" />
-              <!-- 商品名 -->
-              <p class="name">サンプル商品</p>
-              <!-- 簡易説明 -->
-              <p class="explain">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-              <!-- 価格 -->
-              <p class="price">3000円<span class="tax">(税込)</span></p>
-            </a>
-          </li>
+      <ul class="product_flex">
+        <?php if ($products) { ?>
+          <?php
+          if ($product_01) {
+              // 画像フィールド 'product_img' の値を取得
+              $product_img = $product_01['product_img'];
+              $product_img_url = !empty($product_img) && !empty($product_img['url']) ? $product_img['url'] : get_template_directory_uri() . '/assets/images/noimage.png';
+
+              // 商品名フィールド 'product_name' の値を取得
+              $product_name = $product_01['product_name'];
+
+              // 簡易説明フィールド 'product_explain' の値を取得
+              $product_explain = $product_01['product_explain'];
+
+              // 価格フィールド 'product_price' の値を取得
+              $product_price = $product_01['product_price'];
+
+              // 商品IDフィールド 'product_id' の値を取得
+              $product_id = $product_01['product_id'];
+              ?>
+
+              <li class="product_flex_item">
+                  <a class="bl_productsCard hp_hoverScale_img_wrapper" href="<?php echo esc_url(home_url("products/?colorme_item=$product_id")); ?>">
+                      <!-- PC画像 -->
+                      <div class="product_flex_item_img bl_productsCard_bg bl_img_wrapper">
+                          <img class="bl_img hp_hoverScale_img" src="<?php echo esc_url($product_img_url); ?>" alt="<?php echo esc_attr($product_name); ?>" />
+                      </div>
+                      <!-- 商品名 -->
+                      <p class="name"><?php echo esc_html($product_name); ?></p>
+                      <!-- 簡易説明 -->
+                      <p class="explain"><?php echo esc_html($product_explain); ?></p>
+                      <!-- 価格 -->
+                      <p class="price"><?php echo esc_html($product_price); ?>円<span class="tax">(税込)</span></p>
+                  </a>
+              </li>
+
+          <?php
+          }
+          ?>
+
+          <?php
+          if ($product_02) {
+              // 画像フィールド 'product_img' の値を取得
+              $product_img = $product_02['product_img'];
+              $product_img_url = !empty($product_img) && !empty($product_img['url']) ? $product_img['url'] : get_template_directory_uri() . '/assets/images/noimage.png';
+
+              // 商品名フィールド 'product_name' の値を取得
+              $product_name = $product_02['product_name'];
+
+              // 簡易説明フィールド 'product_explain' の値を取得
+              $product_explain = $product_02['product_explain'];
+
+              // 価格フィールド 'product_price' の値を取得
+              $product_price = $product_02['product_price'];
+
+              // 商品IDフィールド 'product_id' の値を取得
+              $product_id = $product_02['product_id'];
+              ?>
+
+              <li class="product_flex_item">
+                  <a class="bl_productsCard hp_hoverScale_img_wrapper" href="<?php echo esc_url(home_url("products/?colorme_item=$product_id")); ?>">
+                      <!-- PC画像 -->
+                      <div class="product_flex_item_img bl_productsCard_bg bl_img_wrapper">
+                          <img class="bl_img hp_hoverScale_img" src="<?php echo esc_url($product_img_url); ?>" alt="<?php echo esc_attr($product_name); ?>" />
+                      </div>
+                      <!-- 商品名 -->
+                      <p class="name"><?php echo esc_html($product_name); ?></p>
+                      <!-- 簡易説明 -->
+                      <p class="explain"><?php echo esc_html($product_explain); ?></p>
+                      <!-- 価格 -->
+                      <p class="price"><?php echo esc_html($product_price); ?>円<span class="tax">(税込)</span></p>
+                  </a>
+              </li>
+
+          <?php
+          }
+          ?>
+
+          <?php
+          if ($product_03) {
+              // 画像フィールド 'product_img' の値を取得
+              $product_img = $product_03['product_img'];
+              $product_img_url = !empty($product_img) && !empty($product_img['url']) ? $product_img['url'] : get_template_directory_uri() . '/assets/images/noimage.png';
+
+              // 商品名フィールド 'product_name' の値を取得
+              $product_name = $product_03['product_name'];
+
+              // 簡易説明フィールド 'product_explain' の値を取得
+              $product_explain = $product_03['product_explain'];
+
+              // 価格フィールド 'product_price' の値を取得
+              $product_price = $product_03['product_price'];
+
+              // 商品IDフィールド 'product_id' の値を取得
+              $product_id = $product_03['product_id'];
+              ?>
+
+              <li class="product_flex_item">
+                  <a class="bl_productsCard hp_hoverScale_img_wrapper" href="<?php echo esc_url(home_url("products/?colorme_item=$product_id")); ?>">
+                      <!-- PC画像 -->
+                      <div class="product_flex_item_img bl_productsCard_bg bl_img_wrapper">
+                          <img class="bl_img hp_hoverScale_img" src="<?php echo esc_url($product_img_url); ?>" alt="<?php echo esc_attr($product_name); ?>" />
+                      </div>
+                      <!-- 商品名 -->
+                      <p class="name"><?php echo esc_html($product_name); ?></p>
+                      <!-- 簡易説明 -->
+                      <p class="explain"><?php echo esc_html($product_explain); ?></p>
+                      <!-- 価格 -->
+                      <p class="price"><?php echo esc_html($product_price); ?>円<span class="tax">(税込)</span></p>
+                  </a>
+              </li>
+
+          <?php
+          }
+          ?>
+        <?php
+        } else {
+            echo 'No products found.';
+        }
+        ?>
       </ul>
+      <div class="bl_topPage_blogSec_bottom">
+        <a href="<?= home_url('products/?colorme_page=items') ?>" class="el_lineBtn el_lineBtn__rev hp_scrollUp"><span>もっと見る</span></a>
+      </div>
     </div>
   </div>
 

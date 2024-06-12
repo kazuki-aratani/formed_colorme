@@ -1620,6 +1620,10 @@ body.js_overlay {
   background-color: #e4f4fa;
   margin-top: 160px;
   padding: 150px 0;
+  @media screen and (max-width: 768px) {
+    margin-top: 80px;
+    padding: 40px 0;
+  }
   .bl_topPage_colormeProducts {
     .bl_heading .bl_heading_en {
       font-size: 12px;
@@ -1645,6 +1649,39 @@ body.js_overlay {
     @media screen and (max-width: 768px) {
       .bl_heading .bl_heading_ja {
         font-size: 22px;
+      }
+    }
+    .product_flex {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 40px;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+      .bl_productsCard {
+        width: 100%;
+        position: relative;
+        padding-bottom: 30px;
+        .bl_productsCard_bg {
+          margin-bottom: 30px;
+          padding-top: 100%;
+        }
+        .name {
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 15px;
+        }
+        .explain {
+          font-size: 14px;
+          color: #aaa;
+          margin-bottom: 15px;
+        }
+        .price {
+          font-size: 20px;
+          .tax {
+            font-size: 10px;
+          }
+        }
       }
     }
   }
@@ -5339,10 +5376,14 @@ input[type=radio]:checked + .bl_recruitPage_tabLink span {
 }
 .bl_colorme_page .product_wrp .left .switch_image {
   display: flex;
-  justify-content: space-between;
   -moz-column-gap: 15px;
   column-gap: 15px;
   row-gap: 15px;
+}
+@media screen and (max-width: 768px) {
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  row-gap: 10px;
 }
 .bl_colorme_page .product_wrp .left .switch_image .hover_image {
   width: 22.6%;
@@ -5352,13 +5393,13 @@ input[type=radio]:checked + .bl_recruitPage_tabLink span {
 }
 @media screen and (min-width: 1200px) {
   .bl_colorme_page .product_wrp .left .switch_image .hover_image {
-    width: 120px;
+    width: 121px;
     height: 120px;
   }
 }
 @media screen and (max-width: 768px) {
   .bl_colorme_page .product_wrp .left .switch_image .hover_image {
-    width: 21.6%;
+    width: 25%;
     height: 20vw;
   }
 }

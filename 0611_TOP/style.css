@@ -1620,6 +1620,12 @@ body.js_overlay {
   margin-top: 160px;
   padding: 150px 0;
 }
+@media screen and (max-width: 768px) {
+  .bl_topPage_colormeProducts_bg {
+    margin-top: 80px;
+    padding: 40px 0;
+  }
+}
 .bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .bl_heading .bl_heading_en {
   font-size: 12px;
   letter-spacing: 0.2em;
@@ -1643,6 +1649,42 @@ body.js_overlay {
   .bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .bl_heading .bl_heading_ja {
     font-size: 22px;
   }
+}
+.bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  .bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex {
+    flex-direction: column;
+  }
+}
+.bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex .bl_productsCard {
+  width: 100%;
+  position: relative;
+  padding-bottom: 30px;
+}
+.bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex .bl_productsCard .bl_productsCard_bg {
+  margin-bottom: 30px;
+  padding-top: 100%;
+}
+.bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex .bl_productsCard .name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex .bl_productsCard .explain {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+.bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex .bl_productsCard .price {
+  font-size: 20px;
+}
+.bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex .bl_productsCard .price .tax {
+  font-size: 10px;
 }
 
 .bl_companyLinksArea {
@@ -5367,7 +5409,6 @@ input[type=radio]:checked + .bl_recruitPage_tabLink span {
 }
 .bl_colorme_page .product_wrp .left .switch_image {
   display: flex;
-  justify-content: space-between;
   -moz-column-gap: 15px;
   column-gap: 15px;
   row-gap: 15px;
@@ -5382,13 +5423,13 @@ input[type=radio]:checked + .bl_recruitPage_tabLink span {
 
 @media screen and (min-width: 1200px) {
   .bl_colorme_page .product_wrp .left .switch_image .hover_image {
-    width: 120px;
+    width: 121px;
     height: 120px;
   }
 }
 @media screen and (max-width: 768px) {
   .bl_colorme_page .product_wrp .left .switch_image .hover_image {
-    width: 21.6%;
+    width: 25%;
     height: 20vw;
   }
 }
