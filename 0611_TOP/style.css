@@ -1659,6 +1659,15 @@ body.js_overlay {
 @media screen and (max-width: 768px) {
   .bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex {
     flex-direction: column;
+    row-gap: 50px;
+  }
+}
+.bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex .product_flex_item {
+  width: 33.3%;
+}
+@media screen and (max-width: 768px) {
+  .bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex .product_flex_item {
+    width: 100%;
   }
 }
 .bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex .bl_productsCard {
@@ -1670,15 +1679,40 @@ body.js_overlay {
   margin-bottom: 30px;
   padding-top: 100%;
 }
+@media screen and (max-width: 768px) {
+  .bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex .bl_productsCard .bl_productsCard_bg {
+    margin-bottom: 25px;
+  }
+}
 .bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex .bl_productsCard .name {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 15px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  height: 55px;
+}
+@media screen and (max-width: 768px) {
+  .bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex .bl_productsCard .name {
+    height: auto;
+  }
 }
 .bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex .bl_productsCard .explain {
   font-size: 14px;
   color: #aaa;
   margin-bottom: 15px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  height: 45px;
+}
+@media screen and (max-width: 768px) {
+  .bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex .bl_productsCard .explain {
+    height: auto;
+  }
 }
 .bl_topPage_colormeProducts_bg .bl_topPage_colormeProducts .product_flex .bl_productsCard .price {
   font-size: 20px;
@@ -5414,6 +5448,13 @@ input[type=radio]:checked + .bl_recruitPage_tabLink span {
   row-gap: 15px;
 }
 
+@media screen and (max-width: 768px) {
+  .bl_colorme_page .product_wrp .left .switch_image {
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+}
 .bl_colorme_page .product_wrp .left .switch_image .hover_image {
   width: 22.6%;
   height: 9vw;

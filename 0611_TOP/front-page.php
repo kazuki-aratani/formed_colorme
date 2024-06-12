@@ -56,9 +56,9 @@ get_header();
       <?php if (!empty($fv_slider)) :
         foreach ($fv_slider as $index => $fvimage) : ?>
           <img src="<?= $fvimage['fv_slide_img'] ?>" class="bl_fv_slider_img <?php
-                                                                              if ($index === 0) {
-                                                                                echo 'slide-add-animation';
-                                                                              } ?>">
+          if ($index === 0) {
+            echo 'slide-add-animation';
+          } ?>">
         <?php
           // スライダーが5以上ある場合止める
           if ($index === 4) {
@@ -200,6 +200,7 @@ get_header();
 
               // 商品IDフィールド 'product_id' の値を取得
               $product_id = $product_01['product_id'];
+
               ?>
 
               <li class="product_flex_item">
@@ -238,6 +239,7 @@ get_header();
 
               // 商品IDフィールド 'product_id' の値を取得
               $product_id = $product_02['product_id'];
+
               ?>
 
               <li class="product_flex_item">
@@ -276,6 +278,7 @@ get_header();
 
               // 商品IDフィールド 'product_id' の値を取得
               $product_id = $product_03['product_id'];
+
               ?>
 
               <li class="product_flex_item">

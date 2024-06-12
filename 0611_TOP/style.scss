@@ -1657,6 +1657,13 @@ body.js_overlay {
       column-gap: 40px;
       @media screen and (max-width: 768px) {
         flex-direction: column;
+        row-gap: 50px;
+      }
+      .product_flex_item {
+        width: 33.3%;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
       }
       .bl_productsCard {
         width: 100%;
@@ -1665,16 +1672,35 @@ body.js_overlay {
         .bl_productsCard_bg {
           margin-bottom: 30px;
           padding-top: 100%;
+          @media screen and (max-width: 768px) {
+            margin-bottom: 25px;
+          }
         }
         .name {
           font-size: 18px;
           font-weight: 600;
           margin-bottom: 15px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          height: 55px;
+          @media screen and (max-width: 768px) {
+            height: auto;
+          }
         }
         .explain {
           font-size: 14px;
           color: #aaa;
           margin-bottom: 15px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          height: 45px;
+          @media screen and (max-width: 768px) {
+            height: auto;
+          }
         }
         .price {
           font-size: 20px;
@@ -5381,9 +5407,11 @@ input[type=radio]:checked + .bl_recruitPage_tabLink span {
   row-gap: 15px;
 }
 @media screen and (max-width: 768px) {
-  -moz-column-gap: 10px;
-  column-gap: 10px;
-  row-gap: 10px;
+  .bl_colorme_page .product_wrp .left .switch_image {
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
 }
 .bl_colorme_page .product_wrp .left .switch_image .hover_image {
   width: 22.6%;
