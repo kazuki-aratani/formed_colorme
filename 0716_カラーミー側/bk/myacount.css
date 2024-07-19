@@ -1,0 +1,48 @@
+body {
+  background: <{$page_bgcolor}>;
+}
+.c-button {
+  background: <{$button1_bgcolor}>;
+}
+.c-button,
+.c-button:link,
+.c-button:hover,
+.c-button:active,
+.c-button:visited {
+  color: <{$button1_font_color}>;
+}
+.c-button:hover {
+  background: <{$button1_bgcolor_hover}>;
+}
+.c-button--primary {
+  background: #00a2e0;
+}
+.c-button--primary,
+.c-button--primary:link,
+.c-button--primary:hover,
+.c-button--primary:active,
+.c-button--primary:visited {
+  color: #fff;
+}
+/* .c-button--primary:hover {
+  background: <{$button2_bgcolor_hover}>;
+} */
+.c-button--danger {
+  background: <{$button3_bgcolor}>;
+}
+.c-button--danger,
+.c-button--danger:link,
+.c-button--danger:hover,
+.c-button--danger:active,
+.c-button--danger:visited {
+  color: <{$button3_font_color}>;
+}
+.c-button--danger:hover {
+  background: <{$button3_bgcolor_hover}>;
+}
+.c-input--text {
+  border-color: <{$textarea_bordercolor}>;
+}
+.c-input--text:focus {
+  border-color: <{$textarea_bordercolor_focus}>;
+}
